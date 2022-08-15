@@ -1,0 +1,22 @@
+    FeatureFiles   -> Senaryolarımızın olduğu klasör
+    StepDefinitions-> Senaryoların çalışan adımları - metodları burada olacak
+    Pages          -> Page Object Modell sayfalarımız POM (@FindBy)
+    Utilities      -> Driver ve diğer tekrar kullanılacak metodlarımız
+    Runners        -> Çalıştırıcılar
+
+
+    3-Ayarlar
+    B)
+    Selenium
+    Cucumber
+    TestNG
+    Cucumber-TestNG birleştiren lib
+    WebDriverManager Browserlar WebDriver
+
+    Properties de ByteCode version(1.8) ayarı.
+
+
+
+    Kitaplık
+    https://mvnrepository.com/
+

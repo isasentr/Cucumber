@@ -1,0 +1,41 @@
+Product Owner -> Birimler Müdürü
+
+ATM birimi
+Takım Lideri
+Business analist (İş analist) analist
+(Müşteriyle-Developer)
+Developerlar
+Testerlar
+
+Proje gelir
+İş analisti -> developer anlatır
+Developer başlar.
+  -> Developer
+  önce kendine bir test yazar(Unit test)
+  Sonra kodunu yazmaya başlar
+  kod bitince başlangıçta hata veren test
+  sonra doğru sonuç verir.
+
+Test Driven Development -> TDD denir.
+
+Planlama                      Planlama
+Tasarım                       Tasarım
+Geliştirme                    Test-Web Tester -> Senaryolar oluşturalacak
+Test-> web tester             Geliştirme
+Teslim                        Teslim
+
+İş analistyle & Tester neyi sağlıyor ?
+Behavior Driven Development  -> BDD
+
+Önce Siteye git -> adım
+Sonra Login kontrolünü yap -> adım
+Sonra Girdiğini doğrula -> adım
+
+   AGILE metodolojisi -> Müşteri odaklı ve her yapılan işlemi
+gösterilebilecek hale geldiğinde müşteriye göstererek ilerleme.
+
+“ Agile methodolojisi ile iş yapıyorsanız ve uygulama testi için
+BDD kullanmıyorsanız kendinizle çelişiyorsunuzdur. ”
+
+
+Bize bu şekilde senaryo yazma imkanı veren TOOL CUCUMBER dır.
