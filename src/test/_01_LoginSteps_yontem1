@@ -1,0 +1,25 @@
+//package StepDefinitions;
+//
+//import io.cucumber.java.en.*;
+//
+//public class _01_LoginSteps {
+//
+//    @Given("Navigate to basgar")
+//    public void navigate_to_basgar() {
+//
+//        System.out.println("Merhaba cucumber1");
+//
+//    }
+//    @When("Enter username and pasword and click login button")
+//    public void enter_username_and_pasword_and_click_login_button() {
+//        System.out.println("merhaba gherkin1");
+//
+//    }
+//    @Then("User should login successfully")
+//    public void user_should_login_successfully() {
+//
+//        System.out.println("merhaba maven1");
+//
+//    }
+//
+//}
