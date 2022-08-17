@@ -16,6 +16,7 @@ public class GenelWD {
 
 // GEREKSİZ YAZILARI SİLİYOR BAŞLADI
         Logger.getLogger("").setLevel(Level.SEVERE);
+        System.setProperty(org.slf4j.impl.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "Error");  // terminalden boni garcia kaldırma için kullandık
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
         //     BİTTİ
 
@@ -32,11 +33,11 @@ public class GenelWD {
     }
     public static void quitDriver()
     {
-        try {
+     /*   try {//beklemeyi azalmak için kapattık
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
-        }
+        }*/
 
         if (driver != null) { // driver varsa
             driver.quit();

@@ -6,22 +6,52 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class DialogContent
+
+public class DialogContent extends Parent
 {
-    public DialogContent(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+    public DialogContent() {
+        PageFactory.initElements(GenelWD.getDriver(), this);
     }
 
     @FindBy (id = "mat-input-0")
-    public WebElement username;
+    private WebElement username;
 
     @FindBy (id = "mat-input-1")
-    public WebElement password;
+    private WebElement password;
 
     @FindBy (css = "[aria-label='LOGIN']")
-    public WebElement loginButton;
+    private WebElement loginButton;
 
     @FindBy (xpath = "(//span[contains(text(),'Dashboard')])[2]")
-    public WebElement dashboard;
+    private WebElement dashboard;
+
+
+    WebElement myElement;
+    public void findAndSend(String strElement,String value){
+
+        switch (strElement){
+            case "username":myElement=username;break;
+            case "password":myElement=password;break;
+        }
+        sendKeysFunction (myElement,value);
+    }
+
+    public void findAndClick(String strElement){
+
+        switch (strElement){
+            case "loginButton":myElement=loginButton;break;
+        }
+        clickFunction(myElement);
+    }
+    public void findAndContainsText(String strElement,String text){
+
+        switch (strElement){
+            case "dashboard":myElement=dashboard;break;
+        }
+        verifyContainsText(myElement,text);
+    }
+
 
 }
+
+
