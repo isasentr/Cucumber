@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,7 +19,6 @@ public class GenelWD {
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
         //     BİTTİ
 
-        
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
@@ -31,8 +29,8 @@ public class GenelWD {
         }
         return driver;
     }
-    public static void quitDriver()
-    {
+
+    public static void quitDriver() {
      /*   try {//beklemeyi azalmak için kapattık
             Thread.sleep(5000);
         } catch (InterruptedException e) {
@@ -41,9 +39,7 @@ public class GenelWD {
 
         if (driver != null) { // driver varsa
             driver.quit();
-            driver=null;
+            driver = null;
         }
     }
-
-
 }

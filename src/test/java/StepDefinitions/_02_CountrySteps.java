@@ -9,7 +9,6 @@ import io.cucumber.java.en.When;
 public class _02_CountrySteps {
     LeftNav ln=new LeftNav();
 
-    DialogContent dc=new DialogContent();
     @And("Navigate to country page")
     public void navigateToCountryPage() {
         ln.findAndClick("setupOne"); //setup click
@@ -17,13 +16,27 @@ public class _02_CountrySteps {
         ln.findAndClick("Countries"); // countries click
     }
 
+    DialogContent dc=new DialogContent();
     @When("Create a country")
     public void createACountry() {
         dc.findAndClick("addButton");
-        dc.findAndSend("nameInput","ulke11");
+        dc.findAndSend("nameInput","ul55pkfe151");
+        dc.findAndSend("codeInput","1of161");
+        dc.findAndClick("saveButton");
+    }
+
+    @When("Create a country name as {string} code as {string}")
+    public void createACountryNameAsCodeAs(String name, String code) {
+        dc.findAndClick("addButton");
+        dc.findAndSend("nameInput",name);
+        dc.findAndSend("codeInput",code);
+        dc.findAndClick("saveButton");
     }
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
+        dc.findAndContainsText("successMessage","success");
+
     }
+
 }
