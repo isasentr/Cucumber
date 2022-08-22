@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 
 public class _02_CountrySteps {
     LeftNav ln=new LeftNav();
+    DialogContent dc=new DialogContent();
 
     @And("Navigate to country page")
     public void navigateToCountryPage() {
@@ -16,7 +17,7 @@ public class _02_CountrySteps {
         ln.findAndClick("Countries"); // countries click
     }
 
-    DialogContent dc=new DialogContent();
+
     @When("Create a country")
     public void createACountry() {
         dc.findAndClick("addButton");

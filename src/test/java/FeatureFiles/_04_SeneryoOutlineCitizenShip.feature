@@ -6,6 +6,7 @@ Feature: Citizenship with Scenario Outline
     Then User should login successfully
     And Navigate to Citizenship page
 
+#    Alernatif yol data providera karşı
 #  Scenario: Citizenship create
 #    When User a Citizenship name as "vatan51" short name as "vat1"
 #    Then Success message should be displayed
@@ -22,9 +23,13 @@ Feature: Citizenship with Scenario Outline
     When User a Citizenship name as "<CitizenshipName>" short name as "<ShortName>"
     Then Already exist message should be displayed
     And Click on close button
+
+    When  User Delete the "<CitizenshipName>"
+    Then Success message should be displayed
+
     Examples:
       | CitizenshipName | ShortName |
-      | isa1            | ali1      |
-      | isa12f           | ali12f     |
-      | isa13d           | ali13s     |
-      | isa14 s          | ali14  e   |
+      | isa15           | ali54     |
+      | isa122f         | ali125f   |
+      | isa13d5         | ali153s   |
+      | isa1455         | ali148e   |

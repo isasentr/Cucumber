@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class Parent {
 
-    public void sendKeysFunction(WebElement element, String value) {
+    public void sendKeysFunction(WebElement element, String value) {//3.Aşama
 
         waitUntilVisible(element); //beklemeyi yap
         scrolltoElement(element); //kaydırmayı yap
@@ -21,7 +21,7 @@ public class Parent {
     }
 
     public void waitUntilVisible(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(GenelWD.getDriver(), Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(GenelWD.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -43,9 +43,6 @@ public class Parent {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    //beklemeyi yap
-    //kaydırmayı yap
-    //değeri gönder
 
     public void verifyContainsText(WebElement element, String text) {
         waitUntilVisible(element);

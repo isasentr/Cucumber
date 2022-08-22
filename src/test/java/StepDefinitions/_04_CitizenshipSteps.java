@@ -33,6 +33,10 @@ public class _04_CitizenshipSteps {
     public void clickOnCloseButton() {
         dc.findAndClick("closeDialog");
         ////*[contains(text(), 'already exists')]
+    }
 
+    @When("User Delete the {string}")
+    public void userDeleteThe(String arananKelime) {
+            dc.SearchAndDelete(arananKelime);
     }
 }

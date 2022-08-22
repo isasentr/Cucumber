@@ -12,14 +12,13 @@ public class GenelWD {
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
-
+        if (driver == null) {
 // GEREKSİZ YAZILARI SİLİYOR BAŞLADI
         Logger.getLogger("").setLevel(Level.SEVERE);
         System.setProperty(org.slf4j.impl.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "Error");  // terminalden boni garcia kaldırma için kullandık
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
         //     BİTTİ
 
-        if (driver == null) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
 
@@ -31,15 +30,22 @@ public class GenelWD {
     }
 
     public static void quitDriver() {
-     /*   try {//beklemeyi azalmak için kapattık
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }*/
+//       try {//beklemeyi azalmak için kapattık
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
 
         if (driver != null) { // driver varsa
             driver.quit();
             driver = null;
+        }
+    }
+    public static void wait(int saniye) {
+        try {//beklemeyi azalmak için kapattık
+            Thread.sleep(saniye*1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 }
