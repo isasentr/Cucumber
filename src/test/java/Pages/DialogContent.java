@@ -4,10 +4,6 @@ import Utilities.GenelWD;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 
 public class DialogContent extends Parent {
@@ -71,20 +67,39 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//span[contains(text(),'Delete')]")
     private WebElement deleteDialog;
 
-
+    @FindBy(xpath = "(//span[text()='Academic Period'])[1]")
+    private WebElement academicPeriod;
 
     WebElement myElement;
+
     public void findAndSend(String strElement, String value) {  // 2.aşama
         // burda string isimden weblemente ulaşıcam
         switch (strElement) {
-            case "username": myElement = username;break;
-            case "password": myElement = password;break;
-            case "nameInput": myElement = nameInput;break;
-            case "codeInput": myElement = codeInput;break;
-            case "shortName": myElement = shortName;break;
-            case "searchInput": myElement = searchInput;break;
-            case "intcodeInput": myElement = intcodeInput;break;
-            case "priorityInput": myElement = priorityInput;break;
+            case "username":
+                myElement = username;
+                break;
+            case "password":
+                myElement = password;
+                break;
+            case "nameInput":
+                myElement = nameInput;
+                break;
+            case "codeInput":
+                myElement = codeInput;
+                break;
+            case "shortName":
+                myElement = shortName;
+                break;
+            case "searchInput":
+                myElement = searchInput;
+                break;
+            case "intcodeInput":
+                myElement = intcodeInput;
+                break;
+            case "priorityInput":
+                myElement = priorityInput;
+                break;
+
         }
         sendKeysFunction(myElement, value);
     }
@@ -92,14 +107,31 @@ public class DialogContent extends Parent {
     public void findAndClick(String strElement) {  // 2.aşama
         // burda string isimden weblemente ulaşıcam
         switch (strElement) {
-            case "loginButton": myElement = loginButton;break;
-            case "addButton": myElement = addButton;break;
-            case "saveButton": myElement = saveButton;break;
-            case "closeDialog": myElement = closeDialog;break;
+            case "acceptCookies":
+                myElement = acceptCookies;
+                break;
+            case "loginButton":
+                myElement = loginButton;
+                break;
+            case "addButton":
+                myElement = addButton;
+                break;
+            case "saveButton":
+                myElement = saveButton;
+                break;
+            case "closeDialog":
+                myElement = closeDialog;
+                break;
 
-            case "searchButton": myElement = searchButton;break;
-            case "deleteButton": myElement = deleteButton;break;
-            case "deleteDialog": myElement = deleteDialog;break;
+            case "searchButton":
+                myElement = searchButton;
+                break;
+            case "deleteButton":
+                myElement = deleteButton;
+                break;
+            case "deleteDialog":
+                myElement = deleteDialog;
+                break;
         }
 
         clickFunction(myElement);
@@ -108,25 +140,32 @@ public class DialogContent extends Parent {
     public void findAndContainsText(String strElement, String text) {  // 2.aşama
         // burda string isimden weblemente ulaşıcam
         switch (strElement) {
-            case "dashboard": myElement = dashboard;break;
-            case "successMessage": myElement = successMessage;break;
-            case "alreadyExist": myElement = alreadyExist;break;
+            case "dashboard":
+                myElement = dashboard;
+                break;
+            case "successMessage":
+                myElement = successMessage;
+                break;
+            case "alreadyExist":
+                myElement = alreadyExist;
+                break;
         }
 
         verifyContainsText(myElement, text);
     }
 
-    public void SearchAndDelete(String searchText){
+    public void SearchAndDelete(String searchText) {
         findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
 
 //        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
 //        wait.until(ExpectedConditions.stalenessOf(deleteButton));
-
-        GenelWD.wait(2); // TODO: incelenecek
+        waitUntilLoading();
+//        GenelWD.wait(2); // TODO: incelenecek
         findAndClick("deleteButton");// silme butonua bas
         findAndClick("deleteDialog");// dilogdaki silme butonuna bas
     }
+
 
 }
 

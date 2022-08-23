@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
+import Pages.FormContent;
 import Pages.LeftNav;
 import io.cucumber.java.en.And;
 import io.cucumber.datatable.DataTable;
@@ -11,6 +12,8 @@ public class _05_DataTableSteps {
 
     LeftNav ln = new LeftNav();
     DialogContent dc=new DialogContent();
+
+    FormContent fr=new FormContent();
     @And("Click on the element in the left nav")
     public void clickOnTheElementInTheLeftNav(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
@@ -49,6 +52,17 @@ public class _05_DataTableSteps {
         for (int i = 0; i < listElement.size(); i++) {
             dc.SearchAndDelete(listElement.get(i));
             //listin ilke elemeanına(webelemnt adı)  ikinci elemanı yani değeri gönder
+        }
+    }
+
+    @And("Click on the element in the Form Content")
+    public void clickOnTheElementInTheFormContent(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+
+        for (int i = 0; i < listElement.size(); i++) {
+            //   System.out.println("listElement = " + listElement.get(i));
+            fr.findAndClick(listElement.get(i));
+
         }
     }
 }

@@ -32,10 +32,12 @@ public class _01_LoginSteps {
        klm. findAndSend("username","richfield.edu");
        klm. findAndSend("password","Richfield2020!");
        klm.findAndClick("loginButton");
+
     }
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
 //        Assert.assertTrue(klm.dashboard.getText().contains("Dashboard"));
         klm.findAndContainsText("dashboard","Dashboard");
+        klm.findAndClick("acceptCookies");
     }
 }
