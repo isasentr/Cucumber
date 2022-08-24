@@ -17,16 +17,26 @@ Feature: Entrace Exam Functionality
       | addButton |
 
     And User Sending the keys in Dialog Content
-      | nameInput | isa |
+      | nameInput | isyafhh5g5 |
 
     And Click on the element in the Form Content
       | academicPeriod  |
       | academicPeriod1 |
       | gradeLevel      |
-      | gradeLevel2     |
-      | saveButton |
+      | gradeLevel1     |
+
 
 #    todo: akademik period ve gradelevel tıklama problemi
-
-
+    And Click on the element in the Dialog
+      | saveButton |
     Then Success message should be displayed
+
+    And Click on the element in the left nav
+      | entraceExam      |
+      | setupTwo         |
+      | entraceExamPoint |
+
+    And User Delete item from Dialog
+      | isyafhh5g5 |
+
+    And Success message should be displayed

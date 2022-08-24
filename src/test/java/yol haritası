@@ -1,0 +1,23 @@
+BİZ ne yaptık ne yapıyoruz ne yapacağız
+
+YOL HARITASI
+Öğrendiklerimiz :
+Algoritma
+JAVA Core
+GitHUB
+Html-Selenium
+TestNG
+cucumber  Runners,Report,Parallel 2-3 gün daha var
+
+Geriye ne Kaldı
+
+Database Testing
+-SQL  5 Gün  MySql üzerinden DB komutlarını öğreneceğiz
+-JDBC 4 Gün  İntellij içinden yani kütüphanesiyle kullanacağız
+
+Api testing
+-Postman     3 Gün  Postman program üzerinden test yapacağız
+-RestAssured 6 Gün  İntellij içinden yani kütüphanesiyle kullanacağız
+
+DevOps
+-JENKINS  4 GÜN programları ototmatik çalıştırmak için tool

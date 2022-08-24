@@ -10,16 +10,16 @@ public class FormContent extends Parent {
         PageFactory.initElements(GenelWD.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//span[text()='Academic Period'])[1]")
+    @FindBy(xpath = "(//mat-select[@formcontrolname='id']/div/div)[1]")
     private WebElement academicPeriod;
 
-    @FindBy(xpath = "//span[contains(text(),' 2021-2022 ')]")
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[1]")
     private WebElement academicPeriod1;
 
-    @FindBy(xpath = "//mat-form-field[@formgroupname='gradeLevel']")
+    @FindBy(xpath = "(//mat-select[@formcontrolname='id']/div/div)[3]")
     private WebElement gradeLevel;
 
-    @FindBy(xpath = "(//span[@class='mat-option-text'])[3]")
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[1]")
     private WebElement gradeLevel1;
 
     WebElement myElement;
@@ -35,9 +35,9 @@ public class FormContent extends Parent {
 
         clickFunction(myElement);
 
-        if (myElement==gradeLevel||myElement==gradeLevel1||myElement==academicPeriod1){
-            GenelWD.wait(1);
-        }
+//        if (myElement==gradeLevel||myElement==gradeLevel1||myElement==academicPeriod1){
+//            GenelWD.wait(1);
+//        }
     }
 
 }
