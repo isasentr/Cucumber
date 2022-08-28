@@ -32,7 +32,7 @@ And Success message should be displayed
     Examples:
       | nameInput1 | codeInput1 | intcodeInput1 | priorityInput1 |
       | aligfg        | 125453        | 648             | 124357           |
-      | vefliff       | 546          | 5459            | 5405             |
-      | kemfaldd      | 428          | 8486            | 8426             |
-      | akfsıns       | 745          | 7473            | 7433             |
-      | melffihs      | 1404         | 12404           | 10451            |
+#      | vefliff       | 546          | 5459            | 5405             |
+#      | kemfaldd      | 428          | 8486            | 8426             |
+#      | akfsıns       | 745          | 7473            | 7433             |
+#      | melffihs      | 1404         | 12404           | 10451            |

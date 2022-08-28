@@ -47,9 +47,9 @@ Feature: Entrace Exam Functionality
     And Success message should be displayed
     Examples:
       | ExamName         | AcademicPeriodOption | GradeLevelOption |
-      | Math exam ighhs1 | academicPeriod1      | gradeLevel1      |
-      | IT exam ighhs1     | academicPeriod1      | gradeLevel1      |
-      | Oracle exam ighhs1 | academicPeriod1      | gradeLevel1      |
-      | Math exam  ighhs1  | academicPeriod1      | gradeLevel1      |
+      | Math exam ighhts1  | academicPeriod1      | gradeLevel1      |
+      | IT exam 54     | academicPeriod2      | gradeLevel2      |
+      | IT exam ighhsj1     | academicPeriod2      | gradeLevel3      |
+      | Oracle exam ihghhs1 | academicPeriod1      | gradeLevel4      |
+      | Oracle exam ighjhs1 | academicPeriod1      | gradeLevel5      |
 
-#    TODO yukarıdaki akademik  ve grade level option ların diğer değer

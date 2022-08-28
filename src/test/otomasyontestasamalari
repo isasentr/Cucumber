@@ -1,0 +1,33 @@
+yeni bir özellik eklendiğinde
+
+hatalarda var ise giderildiğinde
+  -- tester manuel testing ile defect var ise onları
+     jırada oluşturur. kendine verilen süre içerisinde
+     aynı zamanda bu bölümün automation kodlarını
+     yazar ve Regression test grubuna ekler.
+
+Release günü gelmeden 2 veya 3 gün önce
+Regression testi yapılır: yeni eklenen bölüm-eski
+bölümler ile hatasız çalışıyormu.
+Diğer bölümleri etkiledimi
+Başarısız oldu ise: Manuel olarak test ede o bölümü
+ve gerçekten hata var ise defect taksı açar.
+
+Başarılı ise. UAT testine geçilir. User acceptance test
+Kullanıcı kabul testi. Bisuness taraf.
+Müşteri tarafı test eder.
+Başarısız ise :  Manuel olarak test ede o bölümü
+                 ve gerçekten hata var ise defect taksı açar.
+Başarılı ise :  Release günü beleniyor.PRODuction ENV.
+buraya kadar TEST ENV.
+
+PROD ENV.
+RELASE GÜNÜ - PROD sahnesi
+
+saat 6 da: mesai bitince.
+son sürüm PROD a yüklenir.
+Bisuness taraf. tüm testlerini CANLI ortamda yapar.
+ONAY verirse güncelleme kalır.
+ONAY vermzese , hata çıkarsa önceki sürüme geri dönülür.
+
+Ayda 2 kere döngü devam eder.

@@ -15,7 +15,7 @@ public class DialogContent extends Parent {
         PageFactory.initElements(GenelWD.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//button[@class='consent-give'])[1]")
+    @FindBy(xpath = "(//button[contains(text(),'Accept all cookies')])[1]")
     private WebElement acceptCookies;
     @FindBy(id = "mat-input-0")
     private WebElement username;

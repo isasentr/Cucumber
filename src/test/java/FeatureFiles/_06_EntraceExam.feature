@@ -25,8 +25,8 @@ Feature: Entrace Exam Functionality
       | gradeLevel      |
       | gradeLevel1     |
 
-
 #    todo: akademik period ve gradelevel tıklama problemi
+
     And Click on the element in the Dialog
       | saveButton |
     Then Success message should be displayed

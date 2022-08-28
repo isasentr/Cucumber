@@ -6,7 +6,8 @@
 #  Sonra yukarıdaki senaryoyu Gherkin dilinde yazdık.Ability:
 
 Feature: Login Functionality
-
+  @SmokeTest
+  @Regression
   Scenario: Login with valid username ve password
 
     Given Navigate to basgar
