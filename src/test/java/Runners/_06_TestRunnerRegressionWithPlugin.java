@@ -12,6 +12,6 @@ import io.cucumber.testng.CucumberOptions;
         //java target klasöründe sonc var cosya ismi ile bulabilirsin
 )
 
-public class _06_TestRunnerRegressionWithPlugin extends AbstractTestNGCucumberTests {
+public class _06_TestRunnerRegressionWithPlugin  extends AbstractTestNGCucumberTests  {
 }
 

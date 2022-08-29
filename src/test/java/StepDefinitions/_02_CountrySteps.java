@@ -29,6 +29,8 @@ public class _02_CountrySteps {
         dc.findAndClick("addButton");
         dc.findAndSend("nameInput",randomGenName);
         dc.findAndSend("codeInput",randomGenCode);
+//        dc.findAndSend("nameInput",randomGenName);
+//        dc.findAndSend("codeInput",randomGenCode);
         dc.findAndClick("saveButton");
     }
 

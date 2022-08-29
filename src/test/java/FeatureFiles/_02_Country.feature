@@ -4,7 +4,7 @@ Background:
   When Enter username and pasword and click login button
   Then User should login successfully
   @SmokeTest
-  @Regression
+#  @Regression
 
   Scenario: Create Country
     And Navigate to country page

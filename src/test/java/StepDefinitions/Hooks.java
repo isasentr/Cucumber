@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Utilities.GenelWD;
+import com.aventstack.extentreports.service.ExtentTestManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -36,6 +37,9 @@ public class Hooks {
             TakesScreenshot screenshot = (TakesScreenshot) GenelWD.getDriver();
             File ekranDosyasi = screenshot.getScreenshotAs(OutputType.FILE);
 
+            //extend Rapora ekliyor.
+            ExtentTestManager.getTest().addScreenCaptureFromBase64String(getBase64Screenshot());
+
             try {
                 FileUtils.copyFile(ekranDosyasi,
                         new File("target/FailedScreenShots/"+ scenario.getId()+date.format(formatter)+".png"));
@@ -43,9 +47,13 @@ public class Hooks {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
-
         // ekran görüntüsü al senaryo hatalı ise
         GenelWD.quitDriver();
-    }}
+    }
+    public String getBase64Screenshot()
+    {
+        return ((TakesScreenshot) GenelWD.getDriver()).getScreenshotAs(OutputType.BASE64);
+    }
+
+}
