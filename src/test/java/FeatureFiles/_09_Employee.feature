@@ -16,21 +16,22 @@ Feature: Datatable Functionality
     And Click on the element in the Dialog
       | addButton |
 
-    And User Sending the keys in Dialog Content
+    And User Sending the keys in Form Content
       | firstname  | <firstname1>  |
       | lastName   | <lastName1>   |
       | employeeId | <employeeId1> |
 
 
-    And Click on the element in the Dialog
+    And Click on the element in the Form Content
       | gender          |
       | male      |
       | employeeType    |
       | teacher |
+      | actionFunction |
       | documentType |
       | passport |
 
-    And User Sending the keys in Dialog Content
+    And User Sending the keys in Form Content
       | documentNumber | <documentNumber1> |
 
 

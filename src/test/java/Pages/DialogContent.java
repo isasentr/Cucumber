@@ -3,6 +3,7 @@ package Pages;
 import Utilities.GenelWD;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -76,55 +77,6 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//span[text()='Academic Period'])[1]")
     private WebElement academicPeriod;
 
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='firstName']//input")
-    private WebElement firstname;
-
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='lastName']//input")
-    private WebElement lastName;
-
-    @FindBy(xpath = "//mat-select[@formcontrolname='gender']")
-    private WebElement gender;
-
-    @FindBy(xpath = "//span[text()=' Male ']")
-    private WebElement male;
-
-    @FindBy(xpath = "//span[text()=' Female ']")
-    private WebElement female;
-
-    @FindBy(xpath = "//mat-select[@formcontrolname='types']")
-    private WebElement employeeType;
-
-    @FindBy(xpath = "//span[text()=' Teacher ']")
-    private WebElement teacher;
-
-    @FindBy(xpath = "//span[text()=' Supervisor ']")
-    private WebElement supervisor;
-
-    @FindBy(xpath = "//span[text()=' Other ']")
-    private WebElement other;
-    @FindBy(xpath = "//input[@formcontrolname='employeeId']")
-    private WebElement employeeId;
-
-    @FindBy(xpath = "(//mat-select//div[@class='mat-select-value ng-tns-c93-97'])[1]")
-    private WebElement documentType;
-
-    @FindBy(xpath = "(//span[text()=' Passport '])")
-    private WebElement passport;
-
-    @FindBy(xpath = "(//span[text()=' Birth Certificate '])")
-    private WebElement birthSertificate;
-
-    @FindBy(xpath = "//input[@formcontrolname='documentNumber']")
-    private WebElement documentNumber;
-
-    @FindBy(xpath = "//div[text()='Contact & Address']")
-    private WebElement contact;
-
-    @FindBy(xpath = "//input[@formcontrolname='country']")
-    private WebElement country;
-
-
-
     WebElement myElement;
 
     public void findAndSend(String strElement, String value) {  // 2.aşama
@@ -154,22 +106,6 @@ public class DialogContent extends Parent {
             case "priorityInput":
                 myElement = priorityInput;
                 break;
-            case "firstname":
-                myElement = firstname;
-                break;
-            case "lastName":
-                myElement = lastName;
-                break;
-            case "employeeId":
-                myElement = employeeId;
-                break;
-                case "documentNumber":
-                myElement = documentNumber;
-                break;
-                case "country":
-                myElement = country;
-                break;
-
 
         }
         sendKeysFunction(myElement, value);
@@ -202,39 +138,7 @@ public class DialogContent extends Parent {
             case "deleteDialog":
                 myElement = deleteDialog;
                 break;
-            case "gender":
-                myElement = gender;
-                break;
-            case "male":
-                myElement = male;
-                break;
-            case "female":
-                myElement = female;
-                break;
-            case "employeeType":
-                myElement = employeeType;
-                break;
-            case "teacher":
-                myElement = teacher;
-                break;
-            case "supervisor":
-                myElement = supervisor;
-                break;
-            case "other":
-                myElement = other;
-                break;
-            case "documentType":
-                myElement = documentType;
-                break;
-            case "passport":
-                myElement = passport;
-                break;
-            case "birthSertificate":
-                myElement = birthSertificate;
-                break;
-                case "contact":
-                myElement = contact;
-                break;
+
         }
 
         clickFunction(myElement);

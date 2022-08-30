@@ -48,7 +48,6 @@ public class _05_DataTableSteps {
     @And("User Delete item from Dialog")
     public void userDeleteItemFromDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);  //2 boyutlu hale getirdi
-
         for (int i = 0; i < listElement.size(); i++) {
             dc.SearchAndDelete(listElement.get(i));
             //listin ilke elemeanına(webelemnt adı)  ikinci elemanı yani değeri gönder
@@ -58,11 +57,18 @@ public class _05_DataTableSteps {
     @And("Click on the element in the Form Content")
     public void clickOnTheElementInTheFormContent(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
-
         for (int i = 0; i < listElement.size(); i++) {
             //   System.out.println("listElement = " + listElement.get(i));
             fr.findAndClick(listElement.get(i));
+        }
+    }
 
+    @And("User Sending the keys in Form Content")
+    public void userSendingTheKeysInFormContent(DataTable elements) {
+        List<List<String>> listElement = elements.asLists(String.class);  //2 boyutlu hale getirdi
+        for (int i = 0; i < listElement.size(); i++) {
+            fr.findAndSend(listElement.get(i).get(0), listElement.get(i).get(1));
+            //listin ilke elemeanına(webelemnt adı)  ikinci elemanı yani değeri gönder
         }
     }
 }

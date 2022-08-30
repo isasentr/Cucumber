@@ -21,11 +21,10 @@ public class Parent {
         scrolltoElement(element); //kaydırmayı yap
         element.clear();      //kutucugu temizle
         element.sendKeys(value);//değeri gönder
-
     }
 
     public void waitUntilVisible(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(GenelWD.getDriver(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(GenelWD.getDriver(), Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -58,14 +57,6 @@ public class Parent {
         WebDriverWait wait=new WebDriverWait(GenelWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar > *"), 0));
     }
-    public void actionFunction(WebElement element) {
-        Actions act=new Actions(GenelWD.getDriver());
-        Action aksiyon=act
-                .keyDown(Keys.ESCAPE)
-                .keyUp(Keys.ESCAPE)
-                .build();
-        aksiyon.perform();
-        clickFunction(element);
-    }
+
 }
 

@@ -7,7 +7,6 @@ import io.cucumber.testng.CucumberOptions;
         tags = "@Regression",
         features = {"src/test/java/FeatureFiles/"},
         glue = {"StepDefinitions"},
-
         plugin= {"html:target\\cucumber-reports.html"}
         //java target klasöründe sonc var cosya ismi ile bulabilirsin
 )
