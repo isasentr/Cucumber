@@ -117,12 +117,17 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M1</version>
                 <configuration>
+                    <!--                   XML paralel çalışmada master report için kondu-->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/java/XMLFiles/ParallelTesting_MasterReport.xml</suiteXmlFile>
+                    </suiteXmlFiles>
 
-                    <includes>
-                        <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                        <include>**/_04_TestRunnerSmoke.java</include>
-                        <!--                        <include>**/runners/*TestRunner*.java</include>-->
-                    </includes>
+                    <!--                    Paralele çalışma yok iken diren runner calssı çalıştırmak aşağıdaki bölüm kullanılır.-->
+                    <!--                    <includes>-->
+                    <!--                        &lt;!&ndash; for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   &ndash;&gt;-->
+                    <!--                        <include>**/_04_TestRunnerSmoke.java</include>-->
+                    <!--                        &lt;!&ndash;                        <include>**/runners/*TestRunner*.java</include>&ndash;&gt;-->
+                    <!--                    </includes>-->
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
@@ -151,6 +156,5 @@
         </plugins>
 
     </build>
-
 
 </project>

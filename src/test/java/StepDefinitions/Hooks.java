@@ -37,7 +37,7 @@ public class Hooks {
             TakesScreenshot screenshot = (TakesScreenshot) GenelWD.getDriver();
             File ekranDosyasi = screenshot.getScreenshotAs(OutputType.FILE);
 
-            //extend Rapora ekliyor.
+//Extend Reporta ekleniyor  EXTEND report olmadığında burası kaldırılmalı !!! yoksa browserlar KAPANMAZ
             ExtentTestManager.getTest().addScreenCaptureFromBase64String(getBase64Screenshot());
 
             try {

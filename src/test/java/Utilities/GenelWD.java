@@ -12,7 +12,6 @@ import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 public class GenelWD {
     public static WebDriver driver;
 
@@ -39,7 +38,6 @@ public class GenelWD {
         if (threadBrowserName.get() == null) // paralel çalışmayan yani XML den parametreyle gelmeyen ger çağıran
             threadBrowserName.set("chrome"); // Basic araynlar için
 
-
         if (threadDriver.get() == null) {
 
             String browserName = threadBrowserName.get(); // bu threaddeki browsername i verdi.
@@ -65,7 +63,6 @@ public class GenelWD {
                     break;
             }
         }
-
         return threadDriver.get();
     }
 
@@ -79,7 +76,6 @@ public class GenelWD {
             driver = null;
             threadDriver.set(driver); // tekrar gelirse için boş olmuş olsun
         }
-
     }
 
     public static void wait(int saniye) {

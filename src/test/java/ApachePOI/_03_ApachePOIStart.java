@@ -22,7 +22,7 @@ public class _03_ApachePOIStart {
 
         Sheet calismaSayfasi =  calismaKitabi .getSheet("Sheet1");
 
-        Row satir = calismaSayfasi.getRow(0);
+        Row satir = calismaSayfasi.getRow(1);
 
         Cell hucre = satir.getCell(0);
 

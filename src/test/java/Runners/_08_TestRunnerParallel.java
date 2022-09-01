@@ -16,7 +16,7 @@ import org.testng.annotations.Parameters;
 )
 public class _08_TestRunnerParallel extends AbstractTestNGCucumberTests {
 
-    @BeforeClass(alwaysRun = true) // bazı versiyon hataları için
+    @BeforeClass(alwaysRun = true) // bazı java versiyon hataları için, BROWSER bulamadım hatası verdiğinde msg: Optional olarak ekle
     @Parameters("browser")
     public void beforeClass(String browser)
     {
@@ -25,4 +25,8 @@ public class _08_TestRunnerParallel extends AbstractTestNGCucumberTests {
         // bu threade browsername set edildi.
     }
 
+//    @AfterClass(alwaysRun = true) // bazı java versiyon hatalırı için, alternatif browser kapatma
+//    public void afterClass() {
+//        GWD.quitDriver();
+//    }
 }
