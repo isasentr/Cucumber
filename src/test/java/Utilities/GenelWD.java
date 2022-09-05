@@ -7,7 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import java.util.ArrayList;
+
 import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;

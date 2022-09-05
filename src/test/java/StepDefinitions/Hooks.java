@@ -21,13 +21,15 @@ public class Hooks {
         System.out.println("Senaryo başladı");
     }
 
-
     @After
     public void after(Scenario scenario)
     {
         System.out.println("Senaryo Bitti");
         System.out.println("scenario sonucu="+ scenario.getStatus());
         System.out.println("scenario isFailed ?="+ scenario.isFailed());
+
+        //Excele sonuçları yazdır. path, scenario, browsertipi, zaman parametresi ile
+        //yeni bir excele bütün raporu yazacak. Dosyanın varlığını ve yokluğunu kontrol etmek için googledan bulunuz.
 
         LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy");

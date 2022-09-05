@@ -9,10 +9,8 @@ import io.cucumber.datatable.DataTable;
 import java.util.List;
 
 public class _05_DataTableSteps {
-
     LeftNav ln = new LeftNav();
     DialogContent dc=new DialogContent();
-
     FormContent fr=new FormContent();
     @And("Click on the element in the left nav")
     public void clickOnTheElementInTheLeftNav(DataTable elements) {
@@ -32,10 +30,8 @@ public class _05_DataTableSteps {
         for (int i = 0; i < listElement.size(); i++) {
             //   System.out.println("listElement = " + listElement.get(i));
             dc.findAndClick(listElement.get(i));
-
         }
     }
-
     @And("User Sending the keys in Dialog Content")
     public void userSendingTheKeysInDialogContent(DataTable elements) {
         List<List<String>> listElement = elements.asLists(String.class);  //2 boyutlu hale getirdi
@@ -44,7 +40,6 @@ public class _05_DataTableSteps {
             //listin ilke elemeanına(webelemnt adı)  ikinci elemanı yani değeri gönder
         }
     }
-
     @And("User Delete item from Dialog")
     public void userDeleteItemFromDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);  //2 boyutlu hale getirdi
@@ -53,7 +48,6 @@ public class _05_DataTableSteps {
             //listin ilke elemeanına(webelemnt adı)  ikinci elemanı yani değeri gönder
         }
     }
-
     @And("Click on the element in the Form Content")
     public void clickOnTheElementInTheFormContent(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
@@ -62,7 +56,6 @@ public class _05_DataTableSteps {
             fr.findAndClick(listElement.get(i));
         }
     }
-
     @And("User Sending the keys in Form Content")
     public void userSendingTheKeysInFormContent(DataTable elements) {
         List<List<String>> listElement = elements.asLists(String.class);  //2 boyutlu hale getirdi

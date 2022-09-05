@@ -1,10 +1,9 @@
 package Pages;
 
 import Utilities.GenelWD;
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -165,13 +164,17 @@ public class DialogContent extends Parent {
         findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
 
-//        WebDriverWait wait = new WebDriverWait(GenelWD.getDriver(), Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.stalenessOf(deleteButton));
-        waitUntilLoading();
+        WebDriverWait wait=new WebDriverWait(GenelWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.textToBe(By.cssSelector("div[fxlayoutalign='center center'][class='control-full']"),"Search"));
+//        waitUntilLoading();
 //        GenelWD.wait(2); // TODO: incelenecek
+//        JavascriptExecutor js = (JavascriptExecutor) GenelWD.getDriver();
+//        js.executeScript(" document.body.scrollTop = 0; ");
         findAndClick("deleteButton");// silme butonua bas
         findAndClick("deleteDialog");// dilogdaki silme butonuna bas
     }
+
+
 
 }
 

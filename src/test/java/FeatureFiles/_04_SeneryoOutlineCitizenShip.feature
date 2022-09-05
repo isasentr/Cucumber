@@ -29,7 +29,7 @@ Feature: Citizenship with Scenario Outline
 
     Examples:
       | CitizenshipName | ShortName |
-      | isa155           | ali554     |
-      | isa1225f         | ali8125f   |
-      | isa13d65         | ali1953s   |
-      | isa14545         | ali1478e   |
+      | isa4155           | ali554     |
+      | isa14225f         | ali8125f   |
+      | isa134d65         | ali1953s   |
+      | isa145445         | ali1478e   |
