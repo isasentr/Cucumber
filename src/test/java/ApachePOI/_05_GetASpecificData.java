@@ -26,7 +26,7 @@ public class _05_GetASpecificData {
 
         String donecek = "";
 
-        String path = "src/test/java/ApachePOI/LoginData.xlsx";
+        String path = "src/test/java/ApachePOI/resource/LoginData.xlsx";
         Workbook workbook = null;
 
         try {
