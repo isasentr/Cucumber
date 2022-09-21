@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.List;
 
 public class Parent {
 
@@ -54,6 +55,11 @@ public class Parent {
         WebDriverWait wait=new WebDriverWait(GenelWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar > *"), 0));
     }
+    public List<WebElement> waitUntilVisibleAllElement(List<WebElement> elementList) {
+        WebDriverWait wait = new WebDriverWait(GenelWD.getDriver(), Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.visibilityOfAllElements(elementList));
 
+        return elementList;
+    }
 }
 

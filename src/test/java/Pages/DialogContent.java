@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 
 public class DialogContent extends Parent {
@@ -75,6 +76,9 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "(//span[text()='Academic Period'])[1]")
     private WebElement academicPeriod;
+
+    @FindBy(xpath = "//tbody/tr/td[2]") ////tbody[@role='rowgroup']//tr
+    public List<WebElement> nameList;
 
     WebElement myElement;
 

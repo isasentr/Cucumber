@@ -14,7 +14,7 @@ public class JDBCParent {
     protected static Statement statement;
 
     @BeforeTest
-    public void DBConectionOpen() {
+    public void DBConnectionOpen() {
         //baglanti işlemleri
         System.out.println("DB connectin Open");
         System.out.println();

@@ -83,15 +83,11 @@ public class _02_GetAllRowColumn extends JDBCParent {
 
         }
     }
-
     @Test
     public void test4() throws SQLException {
-        // actor tablosundaki tüm satırları ve tüm sütunları yazdırınız, aynı mysql sonuç ekranında olduğu gibi
-        // fakat metod kullanınız, metoda sorguyu gönderiniz ve orada yazdırınız.
         getTable("select * from actor");
 
     }
-
     public void getTable(String sorgu) throws SQLException {
 
         ResultSet rs = statement.executeQuery(sorgu);
