@@ -7,7 +7,8 @@ import io.cucumber.testng.CucumberOptions;
         tags = "@Regression",
         features = {"src/test/java/FeatureFiles/"},
         glue = {"StepDefinitions"},
-        plugin= {"html:target\\cucumber-reports.html"}
+//        plugin= {"html:target\\cucumber-reports.html"}
+        plugin= {"pretty","html:target/site/cucumber-pretty","json:target/cucumber/cucumber.json"} // jenkins için yapıldı
         //java target klasöründe sonc var cosya ismi ile bulabilirsin
 )
 
