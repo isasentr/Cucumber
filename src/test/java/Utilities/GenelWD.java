@@ -46,10 +46,16 @@ public class GenelWD {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
 
-                    ChromeOptions options=new ChromeOptions();// jenkins için eklendi arkaplanda ekranı kapla olarak çalışıp hata vermemesi için
-                    options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");  // jenkins için eklendi arkaplanda ekranı kapla olarak çalışıp hata vermemesi için
 
-                    threadDriver.set(new ChromeDriver(options)); // bu thread e chrome istenmişşse ve yoksa bir tane ekleniyor
+                    if (!runningFromIntelliJ()) {
+                        ChromeOptions options = new ChromeOptions();// jenkins için eklendi arkaplanda ekranı kapla olarak çalışıp hata vermemesi için
+                        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");  // jenkins için eklendi arkaplanda ekranı kapla olarak çalışıp hata vermemesi için
+
+                        threadDriver.set(new ChromeDriver(options)); // bu thread e chrome istenmişşse ve yoksa bir tane ekleniyor}
+
+                    } else
+                        threadDriver.set(new ChromeDriver());
+
                     break;
 
                 case "firefox":
@@ -89,5 +95,10 @@ public class GenelWD {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static boolean runningFromIntelliJ() {
+        String classPath = System.getProperty("java.class.path");
+        return classPath.contains("idea_rt.jar");
     }
 }
