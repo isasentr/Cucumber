@@ -169,27 +169,86 @@
 
 
 
-<!--    jenkins için yaptık-->
-<build>
-            <plugins>
-    <plugin><!--derlemek için-->
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M1</version>
-        <configuration>
+<!--&lt;!&ndash;    jenkins için yaptık&ndash;&gt;-->
+<!--<build>-->
+<!--            <plugins>-->
+<!--    <plugin>&lt;!&ndash;derlemek için&ndash;&gt;-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-surefire-plugin</artifactId>-->
+<!--        <version>3.0.0-M1</version>-->
+<!--        <configuration>-->
 
 
-                                <includes>
-                                    <include>**/_04_TestRunnerSmoke.java</include>
-                                </includes>
+<!--                                <includes>-->
+<!--                                    <include>**/_04_TestRunnerSmoke.java</include>-->
+<!--                                </includes>-->
 
-            <testFailureIgnore>true</testFailureIgnore>
+<!--            <testFailureIgnore>true</testFailureIgnore>-->
 
-        </configuration>
-    </plugin>
-    </plugins>
-    </build>
+<!--        </configuration>-->
+<!--    </plugin>-->
+<!--    </plugins>-->
+<!--    </build>-->
 
     <!--    jenkins için yaptık-->
+<profiles>
+    <profile>
+        <id>SmokeYeni</id>
+
+        <!--    jenkins için yaptık-->
+        <build>
+            <plugins>
+                <plugin><!--derlemek için-->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M1</version>
+                    <configuration>
+
+
+                        <includes>
+                            <include>**/_04_TestRunnerSmoke.java</include>
+                        </includes>
+
+                        <testFailureIgnore>true</testFailureIgnore>
+
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
+
+        <!--    jenkins için yaptık-->
+
+
+    </profile>
+
+    <profile>
+        <id>Regression</id>
+
+        <!--    jenkins için yaptık-->
+        <build>
+            <plugins>
+                <plugin><!--derlemek için-->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M1</version>
+                    <configuration>
+
+
+                        <includes>
+                            <include>**/_06_TestRunnerRegressionWithPlugin</include>
+                        </includes>
+
+                        <testFailureIgnore>true</testFailureIgnore>
+
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
+
+        <!--    jenkins için yaptık-->
+
+
+    </profile>
+</profiles>
 
 </project>
