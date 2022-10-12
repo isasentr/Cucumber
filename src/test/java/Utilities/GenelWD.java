@@ -47,7 +47,7 @@ public class GenelWD {
                     WebDriverManager.chromedriver().setup();
 
                     ChromeOptions options=new ChromeOptions();// jenkins için eklendi arkaplanda ekranı kapla olarak çalışıp hata vermemesi için
-                    options.addArguments("--headless\", \"--no-sandbox\", \"--disable-dev-shm-usage\", \"--disable-gpu\", \"--window-size=1400,2400");  // jenkins için eklendi arkaplanda ekranı kapla olarak çalışıp hata vermemesi için
+                    options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");  // jenkins için eklendi arkaplanda ekranı kapla olarak çalışıp hata vermemesi için
 
                     threadDriver.set(new ChromeDriver(options)); // bu thread e chrome istenmişşse ve yoksa bir tane ekleniyor
                     break;
